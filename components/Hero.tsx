@@ -6,7 +6,12 @@ type Props = {};
 
 export default function Hero({}: Props) {
 	const [text, count] = useTypewriter({
-		words: ['Hi, My name is Josh', 'Developer', 'Designer', 'Creator'],
+		words: [
+			'Hi, The name is Josh',
+			'<Developer/>',
+			'Web Designer',
+			'`Adventurer who likes ${code}`',
+		],
 		loop: true,
 		delaySpeed: 2000,
 	});
@@ -18,7 +23,7 @@ export default function Hero({}: Props) {
 				src="/me.jpg"
 				alt=""
 			/>
-			<div>
+			<div className="z-20">
 				<h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px]">
 					Software Engineer
 				</h2>
@@ -26,11 +31,14 @@ export default function Hero({}: Props) {
 					<span className="mr-3">{text}</span>
 					<Cursor cursorColor="orange" />
 				</h1>
-				<div>
+				<div className="pt-5">
 					<button className="heroButton">About</button>
-					<button className="heroButton">Expereicne</button>
+
+					<button className="heroButton">Experience</button>
+
 					<button className="heroButton">Skills</button>
-					<button className="heroButton">Contact</button>
+
+					<button className="heroButton">Projects</button>
 				</div>
 			</div>
 		</motion.div>
