@@ -1,36 +1,51 @@
 import React from 'react';
 import { SocialIcon } from 'react-social-icons';
-
+import { motion } from 'framer-motion';
 type Props = {};
 
 function Header({}: Props) {
 	return (
 		<header className="sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center ">
-			<div className="flex flex-row items-center">
+			<motion.div
+				initial={{ x: -500, opacity: 0, scale: 0.5 }}
+				animate={{ x: 0, opacity: 1, scale: 1 }}
+				transition={{ duration: 1.5 }}
+				className="flex flex-row items-center"
+			>
 				{/* social icons */}
 				<SocialIcon
-					url="https://www.youtube.com"
+					url="https://www.linkedin.com/in/josh-wenner/"
 					fgColor="gray"
 					bgColor="transparent"
 				/>
 				<SocialIcon
-					url="https://www.youtube.com"
+					url="https://github.com/Joshwen7947"
 					fgColor="gray"
 					bgColor="transparent"
 				/>
 				<SocialIcon
-					url="https://www.youtube.com"
+					url="https://www.behance.net/joshjwenner"
 					fgColor="gray"
 					bgColor="transparent"
 				/>
 				<SocialIcon
-					url="https://www.youtube.com"
+					url="https://www.instagram.com/tall_kid_goes_places/"
 					fgColor="gray"
 					bgColor="transparent"
 				/>
-			</div>
+				<SocialIcon
+					url="https://www.youtube.com/channel/UCXy7Wtat_aXL31oM3okN-1g"
+					fgColor="gray"
+					bgColor="transparent"
+				/>
+			</motion.div>
 			{/* nav */}
-			<div className="flex flex-row items-center text-gray-300 cursor-pointer">
+			<motion.div
+				initial={{ x: 500, opacity: 0, scale: 0.5 }}
+				animate={{ x: 0, opacity: 1, scale: 1 }}
+				transition={{ duration: 1.5 }}
+				className="flex flex-row items-center text-gray-300 cursor-pointer"
+			>
 				<SocialIcon
 					className="cursor-pointer"
 					network="email"
@@ -40,7 +55,7 @@ function Header({}: Props) {
 				<p className="uppercase hidden md:inline-flex text-sm text-gray-400">
 					Get In Touch
 				</p>
-			</div>
+			</motion.div>
 		</header>
 	);
 }
