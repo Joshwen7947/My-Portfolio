@@ -5,6 +5,7 @@ import Hero from "../components/Hero"
 import About from "../components/About";
 import Skills from "../components/Skills";
 import Projects from "../components/Projects";
+import ContactMe from "../components/ContactMe";
 
 const Home: NextPage = () => {
 	return (
@@ -32,6 +33,9 @@ const Home: NextPage = () => {
         <Projects/>
       </section>
       {/* contact me */}
+      <section id="contact" className="snap-end">
+        <ContactMe/>
+      </section>
 		</div>
 	);
 };
