@@ -2,12 +2,9 @@ import React from 'react';
 import { SocialIcon } from 'react-social-icons';
 import { motion } from 'framer-motion';
 import Link from 'next/Link';
-import { Social } from '../sanity/typings';
-type Props = {
-	socials: Social[];
-};
+type Props = {};
 
-function Header({ socials }: Props) {
+function Header({}: Props) {
 	return (
 		<header className="sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center ">
 			<motion.div
@@ -57,10 +54,13 @@ function Header({ socials }: Props) {
 						fgColor="gray"
 						bgColor="transparent"
 					/>
+
+					<p className="uppercase hidden md:inline-flex text-sm text-gray-400">
+						<span className="decoration-[#F7AB0A]/50 underline">
+							Get In Touch
+						</span>
+					</p>
 				</Link>
-				<p className="uppercase hidden md:inline-flex text-sm text-gray-400">
-					Get In Touch
-				</p>
 			</motion.div>
 		</header>
 	);

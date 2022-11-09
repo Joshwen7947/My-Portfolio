@@ -13,6 +13,7 @@ export default function Hero({}: Props) {
 			'<Developer/>',
 			'Web Designer',
 			'`Adventurer who likes ${code}`',
+			'Web3 geek',
 		],
 		loop: true,
 		delaySpeed: 2000,
@@ -35,13 +36,19 @@ export default function Hero({}: Props) {
 				</h1>
 				<div className="pt-5">
 					<Link href="#about">
-						<button className="heroButton">About</button>
+						<button className="heroButton">
+							<b>About</b>
+						</button>
 					</Link>
 					<Link href="#skills">
-						<button className="heroButton">Skills</button>
+						<button className="heroButton">
+							<b>Skills</b>
+						</button>
 					</Link>
 					<Link href="#projects">
-						<button className="heroButton">Projects</button>
+						<button className="heroButton">
+							<b>Projects</b>
+						</button>
 					</Link>
 				</div>
 			</div>
