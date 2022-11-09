@@ -1,6 +1,7 @@
 import React from 'react';
 import { SocialIcon } from 'react-social-icons';
 import { motion } from 'framer-motion';
+import Link from 'next/Link';
 type Props = {};
 
 function Header({}: Props) {
@@ -46,12 +47,14 @@ function Header({}: Props) {
 				transition={{ duration: 1.5 }}
 				className="flex flex-row items-center text-gray-300 cursor-pointer"
 			>
-				<SocialIcon
-					className="cursor-pointer"
-					network="email"
-					fgColor="gray"
-					bgColor="transparent"
-				/>
+				<Link href="#contact">
+					<SocialIcon
+						className="cursor-pointer"
+						network="email"
+						fgColor="gray"
+						bgColor="transparent"
+					/>
+				</Link>
 				<p className="uppercase hidden md:inline-flex text-sm text-gray-400">
 					Get In Touch
 				</p>

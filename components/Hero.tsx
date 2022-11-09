@@ -2,6 +2,8 @@ import React from 'react';
 import { Cursor, useTypewriter } from 'react-simple-typewriter';
 import BackgroundCircles from './BackgroundCircles';
 import { motion } from 'framer-motion';
+import Link from 'next/Link';
+
 type Props = {};
 
 export default function Hero({}: Props) {
@@ -32,13 +34,15 @@ export default function Hero({}: Props) {
 					<Cursor cursorColor="orange" />
 				</h1>
 				<div className="pt-5">
-					<button className="heroButton">About</button>
-
-					<button className="heroButton">Experience</button>
-
-					<button className="heroButton">Skills</button>
-
-					<button className="heroButton">Projects</button>
+					<Link href="#about">
+						<button className="heroButton">About</button>
+					</Link>
+					<Link href="#skills">
+						<button className="heroButton">Skills</button>
+					</Link>
+					<Link href="#projects">
+						<button className="heroButton">Projects</button>
+					</Link>
 				</div>
 			</div>
 		</motion.div>
